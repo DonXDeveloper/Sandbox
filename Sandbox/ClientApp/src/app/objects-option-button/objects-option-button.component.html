@@ -1,0 +1,18 @@
+<div class="{{screenColumnsCss}} sectionHeight pullLeft">
+  <span class="col-12 col-sm-12 col-md-12 questionHeading">
+    {{questionText}}
+    <span class="mandatoryImage">{{mandatoryImage}}</span>
+  </span>
+  <div class="{{columnsCss}} spacer clearPaddingLeft">
+    <span *ngFor="let buttonText of optionButtonData.optionTextList">
+      <span [ngClass]="selectedText == buttonText ? 'buttonEnabled' : 'buttonNormal'"
+            (click)="objectChanged(buttonText, true)">
+        {{buttonText}}
+      </span>
+      
+    </span>
+  </div>
+</div>
+
+
+

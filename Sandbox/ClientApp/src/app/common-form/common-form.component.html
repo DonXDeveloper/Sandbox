@@ -1,0 +1,108 @@
+<!--<div class="">-->
+<div class="screenPanel pullLeft br-all">
+
+  <app-objects-breadcrumbs [pageButtonManagerList]="pageButtonManagerList"
+                           [breadcrumbsRollback]="breadcrumbsRollback"
+                           [currentPageHeader]="currentPageHeader"
+                           [currentPageNumber]="currentPageNumber"
+                           (pageChanged)="changePage($event)">
+  </app-objects-breadcrumbs>
+
+  <div *ngFor="let question of questionsMapped">
+    <div *ngIf="question.show">
+
+      <div *ngIf="question.objectTypeId == eObjectTypes.Textbox">
+        <app-objects-textbox [questionText]="question.questionText"
+                             [fieldName]="question.fieldName"
+                             [helpText]="question.helpText"
+                             [mandatoryText]="question.mandatoryText"
+                             [columns]="question.columns"
+                             [screenColumns]="question.screenColumns"
+                             [maxSize]="question.maxSize"
+                             [mandatory]="question.mandatory"
+                             [formatTypeId]="question.formatTypeId"
+                             [decimalPlaces]="question.decimalPlaces"
+                             [enteredValue]="question.enteredValue"
+                             [valid]="question.valid"
+                             (returnValue)="returnValue($event)">
+        </app-objects-textbox>
+      </div>
+
+      <div *ngIf="question.objectTypeId == eObjectTypes.Date">
+        <app-objects-date [questionText]="question.questionText"
+                          [fieldName]="question.fieldName"
+                          [helpText]="question.helpText"
+                          [mandatoryText]="question.mandatoryText"
+                          [columns]="question.columns"
+                          [screenColumns]="question.screenColumns"
+                          [mandatory]="question.mandatory"
+                          [formatTypeId]="question.formatTypeId"
+                          [decimalPlaces]="question.decimalPlaces"
+                          [enteredValue]="question.enteredValue"
+                          [valid]="question.valid"
+                          (returnValue)="returnValue($event)">
+        </app-objects-date>
+      </div>
+
+      <div *ngIf="question.objectTypeId == eObjectTypes.Textarea">
+        <app-objects-textarea></app-objects-textarea>
+      </div>
+
+      <div *ngIf="question.objectTypeId == eObjectTypes.OptionButton">
+        <app-objects-option-button [questionText]="question.questionText"
+                                   [fieldName]="question.fieldName"
+                                   [optionTextList]="question.optionTextList"
+                                   [optionNextList]="question.optionNextList"
+                                   [enteredValue]="question.enteredValue"
+                                   [helpText]="question.helpText"
+                                   [mandatoryText]="question.mandatoryText"
+                                   [columns]="question.columns"
+                                   [screenColumns]="question.screenColumns"
+                                   [mandatory]="question.mandatory"
+                                   (returnValue)="returnValue($event)">
+        </app-objects-option-button>
+      </div>
+      <div *ngIf="question.objectTypeId == eObjectTypes.Dropdown">
+        <app-objects-dropdown [questionText]="question.questionText"
+                              [fieldName]="question.fieldName"
+                              [helpText]="question.helpText"
+                              [mandatoryText]="question.mandatoryText"
+                              [columns]="question.columns"
+                              [screenColumns]="question.screenColumns"
+                              [mandatory]="question.mandatory"
+                              [ddlTypeId]="question.ddlTypeId"
+                              [enteredValue]="question.enteredValue"
+                              [valid]="question.valid"
+                              (returnValue)="returnValue($event)"></app-objects-dropdown>
+      </div>
+      <div *ngIf="question.objectTypeId == eObjectTypes.PageHeading">
+        <app-objects-page-heading [questionText]="question.questionText"
+                                  [columns]="question.columns"
+                                  [screenColumns]="question.screenColumns">
+        </app-objects-page-heading>
+      </div>
+      <div *ngIf="question.objectTypeId == eObjectTypes.Title">
+        <app-objects-title></app-objects-title>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- the buttons are outside of the question loop -->
+  <div *ngFor="let question of questionsMapped">
+    <div *ngIf="question.objectTypeId == eObjectTypes.Button">
+      <app-objects-button [pageButtonManager]="pageButtonManager"
+                          [fieldName]="question.fieldName"
+                          [enabled]="enabled"
+                          [helpText]="question.helpText"
+                          [columns]="question.columns"
+                          [screenColumns]="question.screenColumns"
+                          (pageChanged)="changePage($event)">
+      </app-objects-button>
+    </div>
+  </div>
+</div>
+
+
+

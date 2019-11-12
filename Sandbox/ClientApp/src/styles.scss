@@ -1,0 +1,70 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import "assets/styles/colours";
+@import "assets/styles/variables";
+
+.br-all {
+  border: 1px solid $black;
+}
+
+body {
+  font-size: 1.2em;
+  color:$mainTextColour;
+}
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $main;
+  width: 100%;
+  /*height:400vh;*/
+  overflow: visible;
+  border: none;
+}
+
+.screenPanel {
+  padding: $screenBorderHeight $screenBorderWidth;
+  margin: $screenBorderHeight $screenBorderWidth;
+  position: absolute;
+  top: $screenBorderHeight;
+  left: $screenBorderWidth;
+  width: calc(100% - (4 * #{$screenBorderWidth}));
+  /*height: calc(100% - (2 * #{$screenBorderHeight}));*/
+  background-color: $white;
+  border-radius: $mainRadius;
+}
+
+.mainPageHeader {
+  font-family: 'Courgette', cursive;
+  font-size:2.2em;
+}
+
+.questionHeading {
+  font-family: 'Lustria', serif;
+}
+
+.mandatoryImage{
+  color:$red;
+}
+
+.pullLeft {
+  float: left;
+}
+
+.pullRight {
+  float: right;
+}
+
+.clearPaddingLeft {
+  padding-left: 0;
+}
+
+input {
+  outline: none;
+
+  &:focus {
+    border-radius: $boxRadius;
+    border: 1px solid $redBorder;
+  }
+}
+

@@ -1,0 +1,55 @@
+@import "../../assets/styles/colours";
+@import "../../assets/styles/variables";
+
+.sectionHeight {
+  height: 120px;
+}
+
+.textbox {
+  z-index:99;
+  margin-left: 14px;
+  padding-left: 5px;
+  height: 50px;
+  width: calc(100% - 14px);
+  /*width: 98%;*/
+  background-color: $main;
+  border: none;
+  border-radius: $boxRadius;
+  /*font-size:1.2em;*/
+  /*&:active {
+    outline: none;
+
+
+  border-radius: $boxRadius;
+  border: 1px solid $redBorder;
+}*/
+  &:focus {
+    border-radius: $boxRadius;
+    border: 1px solid $redBorder;
+  }
+}
+
+
+/*input[type=text] {
+  background-color: $main;
+  border: none;
+  border-radius: $boxRadius;
+}*/
+
+.datePicker{
+  position:absolute;
+  top:0px;
+  right:-26px;
+}
+
+.matPicker {
+  z-index: 1;
+display:none;
+
+}
+
+
+
+.clearPaddingLeft {
+  padding-left: 0;
+}

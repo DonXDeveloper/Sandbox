@@ -1,0 +1,26 @@
+<div class="{{screenColumnsCss}} sectionHeight pullLeft">
+  <span class="col-12 col-sm-12 col-md-12 questionHeading">
+    {{questionText}}
+    <span class="mandatoryImage">{{mandatoryImage}}</span>
+  </span>
+  <div class="{{columnsCss}} clearPaddingLeft" (click)="toggleOpen()">
+      <input class="textbox"  [ngClass]="open ? 'ddlBoxFocus': ''" title="{{helpText}}"
+             [placeholder]="questionText" [value]="defaultDisplay" readonly />
+    <span class="arrowPosition">
+      <span [ngSwitch]="open">
+        <span *ngSwitchCase="true">&#xe019;</span>
+        <span *ngSwitchDefault>&#9660;</span>
+      </span>
+    </span>
+
+    <div class="clearPaddingLeft ddlBoxOuter" [ngClass]="open ? 'show': 'hide'">
+        <div *ngFor="let ddlItem of ddlList">
+          <div class="ddlBox"
+               (click)="selectionChanged(ddlItem.ddlItemKey)">
+            {{ddlItem.ddlItemValue}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

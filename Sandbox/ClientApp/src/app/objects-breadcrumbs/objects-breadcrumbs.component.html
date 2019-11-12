@@ -1,0 +1,13 @@
+<div class="col-12 col-sm-12 col-md-12 crumbs">
+  <span *ngFor="let crumb of breadcrumbTrail">
+
+    <span [ngClass]="currentPageNumber == crumb.pageNumber ? 'highlight' : 'normal'"
+          (click)="breadcrumbClicked(crumb.pageNumber)">
+      {{crumb.pageName}}
+      <span *ngIf="crumb.pageNumber != lastPage" class="spacer">
+        &#x21C4;
+      </span>
+    </span>
+
+  </span>
+</div>

@@ -1,0 +1,35 @@
+@import "../../assets/styles/colours";
+@import "../../assets/styles/variables";
+
+.sectionHeight {
+  height: 120px;
+}
+
+.spacer {
+  margin-top: 12px;
+}
+
+.buttonEnabled, .buttonNormal {
+  cursor: pointer;
+  padding: 10px 30px;
+  margin-left: 15px;
+
+  &:hover {
+    background-color: $main;
+  }
+}
+
+.buttonNormal {
+  border: 2px solid $main;
+  border-radius: $optionButtonRadius;
+  background-color: $white;
+  color: $mainTextColour;
+}
+
+.buttonEnabled {
+  border: 2px solid $midGreen;
+  border-radius: $optionButtonRadius;
+  background-color: $midGreen;
+  color:$white;
+}
+

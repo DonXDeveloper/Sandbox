@@ -1,0 +1,29 @@
+@import "../../assets/styles/colours";
+@import "../../assets/styles/variables";
+
+.crumbs{
+  font-size:0.7em;
+  font-style:italic;
+  height:100px;
+}
+
+.highlight {
+  color: $red;
+  font-weight: 700;
+}
+
+.normal {
+  color: $mainTextColour;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover;
+  }
+}
+
+.spacer {
+  color: $mainTextColour;
+  font-weight: 700;
+  font-size: 1em;
+}

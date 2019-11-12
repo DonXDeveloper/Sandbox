@@ -1,0 +1,11 @@
+<div class="{{screenColumnsCss}} sectionHeight pullLeft">
+  <span class="col-12 col-sm-12 col-md-12 questionHeading">
+    {{questionText}}
+    <span class="mandatoryImage">{{mandatoryImage}}</span>
+  </span>
+  <div class="{{columnsCss}} clearPaddingLeft">
+    <input class="textbox" title="{{helpText}}" [placeholder]="questionText" [(ngModel)]="enteredValue"
+           (keyup)="objectChanged($event.target.value)" />
+   
+  </div>
+</div>

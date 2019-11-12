@@ -1,0 +1,14 @@
+<div class="{{screenColumnsCss}} sectionHeight pullLeft center">
+
+  <div class="{{columnsCss}} spacer clearPaddingLeft">
+    <span *ngFor="let button of buttons">
+          <span class="optionButton {{button.css}}"
+                (click)="buttonClicked(button.buttonType)">
+            {{button.buttonText}}
+          </span>
+    </span>
+  </div>
+</div>
+
+
+

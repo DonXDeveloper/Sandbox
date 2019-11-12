@@ -1,0 +1,65 @@
+@import "../../assets/styles/colours";
+@import "../../assets/styles/variables";
+
+.sectionHeight {
+  height: 120px;
+}
+
+.center{
+  text-align:center;
+}
+
+.spacer {
+  margin-top: 12px;
+}
+
+.optionButton {
+  padding: 10px 30px 14px 30px;
+  margin-left: 15px;
+  border: 2px solid $main;
+  border-radius: $boxRadius;
+}
+
+.backButton, .forwardButtonEnabled {
+  cursor: pointer;
+  border-radius: $boxRadius;
+}
+
+.backButton {
+  border: 2px solid $greenBorder;
+  background-color: $backButton;
+}
+
+.forwardButtonEnabled {
+  border: 2px solid $redBorder;
+  background-color: $forwardButtonEnabled;
+
+  &:active {
+    padding: 10px 27px 14px 33px;
+    background: $forwardButtonEnabled;
+    -webkit-box-shadow: inset 10px 10px 20px $darkGrey;
+    -moz-box-shadow: inset 10px 10px 20px $darkGrey;
+    box-shadow: inset 10px 10px 20px $darkGrey;
+    outline: none;
+  }
+}
+
+.forwardButtonDisabled {
+  border: 2px solid $redBorder;
+  background-color: $forwardButtonDisabled;
+  opacity: $buttonOpacity;
+}
+
+.backButton {
+  border: 2px solid $greenBorder;
+  background-color: $backButton;
+
+  &:active {
+    padding: 10px 27px 14px 33px;
+    background: $backButton;
+    -webkit-box-shadow: inset 10px 10px 20px $darkGrey;
+    -moz-box-shadow: inset 10px 10px 20px $darkGrey;
+    box-shadow: inset 10px 10px 20px $darkGrey;
+    outline: none;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "production": false,
+  "apiUri": "https://localhost:44301/api/",
+  "applicationName": "Dynamic",
+  "applicationPassword": " a new GUID goes here"
+}

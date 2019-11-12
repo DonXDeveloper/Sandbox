@@ -1,0 +1,70 @@
+@import "../../assets/styles/colours";
+@import "../../assets/styles/variables";
+
+.sectionHeight {
+  margin-bottom: 40px;
+  margin-left: 14px;
+}
+
+.questionHeading{
+  padding-left:0;
+}
+
+.textbox {
+  padding-left: 5px;
+  height: 50px;
+  width: calc(100% - 14px);
+  background-color: $main;
+  border: none;
+  border-radius: $boxRadius;
+}
+
+.ddlBoxOuter {
+  border-left: 1px solid $main;
+  border-right: 1px solid $main;
+  border-bottom: 1px solid $main;
+  margin-left: 20px;
+  margin-right: 40px;
+  padding-left: 5px;
+  width: calc(100% - 50px);
+}
+
+.ddlBox {
+  padding-left: 10px;
+  width: calc(100%- 40px);
+  background-color: $white;
+  padding-top: 2px;
+  &:hover {
+    border: 1px solid $greenBorder;
+    border-radius: $boxRadius;
+    padding-left: 9px;
+    padding-top: 0;
+  }
+}
+
+.ddlBoxFocus {
+  border-radius: $boxRadius;
+  border: 1px solid $redBorder;
+  margin-left: 0;
+ 
+}
+
+.clearPaddingLeft {
+  padding-left: 0;
+}
+
+.arrowPosition {
+  position: absolute;
+  top: 8px;
+  right: 50px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+  border:none;
+  height:0;
+}
